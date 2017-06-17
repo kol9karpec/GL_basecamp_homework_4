@@ -4,12 +4,13 @@ OFILE ?= main.out
 
 IFILES += main.c
 
-CFLAGS = --std=c90 -Wall -Werror #-pedantic
+CFLAGS = --std=c99 -Wall -Werror #-pedantic
 CFLAGS += $(IFILES)
 CFLAGS += -o $(OFILE)
 
 all: main.c
 	$(CC) $(CFLAGS)
+	@echo Done!
 
 clean: 
 	@rm -f $(OFILE)
